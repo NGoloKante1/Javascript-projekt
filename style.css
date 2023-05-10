@@ -1,0 +1,54 @@
+/* Layout inspirerad av https://www.geeksforgeeks.org/how-to-define-two-column-layout-using-flexbox/ */
+
+.body {
+    padding: 0%;
+  }
+  
+  .infotext {
+    font-size: 20px;
+  }
+  
+  .outputtext {
+    font-size: 20px;
+  }
+  
+  .Parent {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .leftcol {
+    width: 40%;
+    height: 100vh;
+    background-color: green;
+    text-align: left;
+    color: white;
+    padding: 3%;
+    border: green solid 5px;
+  }
+  
+  .rightcol {
+    width: 60%;
+    padding: 3%;
+    height: 100vh;
+    border: green solid 5px;
+    background-color: bisque;
+  }
+  
+  .form {
+    margin: 10px;
+    height: 25px;
+    font-size: 20px;
+    width: 90%;
+    border-radius: 5px;
+    border-color: chartreuse;
+    border-width: 2px;
+  }
+  
+  .button {
+    width: 30%;
+    padding: 5%;
+    margin: 3%;
+    text-align: center;
+    font-size: 20px;
+  }
