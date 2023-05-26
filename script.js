@@ -8,11 +8,10 @@ function generateRondelet() {
     // Dela upp första meningen i enskilda ord
     let words = sentence1.split(" ");
 
-    // Skapa rondelet
+   //skapa rondelet
     let rondelet = words.slice(0, 4).join(" ").toUpperCase() + "\n\n";
-    rondelet += "\n";
     rondelet += words.slice(0, 4).join(" ") + "\n";
-    rondelet += sentence1.slice(words.slice(0, 4).join(" ").length) + "\n";
+    rondelet += sentence1.slice(words.slice(0, 4).join(" ").length).trim() + "\n"; // Remove leading space using trim()
     rondelet += words.slice(0, 4).join(" ") + "\n";
     rondelet += sentence2 + "\n";
     rondelet += sentence3 + "\n";
