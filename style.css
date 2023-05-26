@@ -1,54 +1,115 @@
-/* Layout inspirerad av https://www.geeksforgeeks.org/how-to-define-two-column-layout-using-flexbox/ */
+/* Reset default browser styles */
+body, h1, p, ol, li, form, input, button, pre {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Sätt bakgrundsbild */
 .body {
-    padding: 0%;
-  }
-  
-  .infotext {
-    font-size: 20px;
-  }
-  
-  .outputtext {
-    font-size: 20px;
-  }
-  
-  .Parent {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .leftcol {
-    width: 40%;
-    height: 100vh;
-    background-color: green;
-    text-align: left;
-    color: white;
-    padding: 3%;
-    border: green solid 5px;
-  }
-  
-  .rightcol {
-    width: 60%;
-    padding: 3%;
-    height: 100vh;
-    border: green solid 5px;
-    background-color: bisque;
-  }
-  
-  .form {
-    margin: 10px;
-    height: 25px;
-    font-size: 20px;
-    width: 90%;
-    border-radius: 5px;
-    border-color: chartreuse;
-    border-width: 2px;
-  }
-  
-  .button {
-    width: 30%;
-    padding: 5%;
-    margin: 3%;
-    text-align: center;
-    font-size: 20px;
-  }
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3ecf47b1-d0c7-4c8e-94d9-1375578eb73b/d49oqna-05488ad3-a2c6-43b5-b3cd-af165b710a0d.png/v1/fill/w_1024,h_641,q_80,strp/cobblestone_wallpaper_by_fivezero09_d49oqna-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjQxIiwicGF0aCI6IlwvZlwvM2VjZjQ3YjEtZDBjNy00YzhlLTk0ZDktMTM3NTU3OGViNzNiXC9kNDlvcW5hLTA1NDg4YWQzLWEyYzYtNDNiNS1iM2NkLWFmMTY1YjcxMGEwZC5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.d7qota-wqZ4DaKNyGBcvVzmP1oO8Hl_Zg7S5izaV0Mk');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Style parent container */
+.Parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style vänster kolumn */
+.leftcol {
+  text-align: center;
+  padding: 20px;
+  background-color: #555555;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style heading */
+h1 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: 'Times New Roman', serif;
+  color: #FFFFFF;
+}
+
+/* Style infotexten */
+.infotext {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-family: 'Times New Roman', serif;
+  color: #FFFFFF;
+}
+
+/* Style formulär */
+.form {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #888888;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: 'Times New Roman', serif;
+  background-color: #CCCCCC;
+  color: #333333;
+}
+
+/* Style på knapparna */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #999999;
+  color: #FFFFFF;
+  font-family: 'Times New Roman', serif;
+}
+
+.button:hover {
+  background-color: #777777;
+}
+
+/* Style på lilla texten */
+.small {
+  font-size: 14px;
+  margin-top: 20px;
+  font-family: 'Times New Roman', serif;
+  color: #FFFFFF;
+}
+
+/* Style på höger kolumn */
+.rightcol {
+  padding: 20px;
+  background-color: #555555;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style på output text */
+.outputtext {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-family: 'Times New Roman', serif;
+  color: #FFFFFF;
+}
+
+/* Style the output pre element */
+#rondeletOutput {
+  font-family: 'Times New Roman', serif;
+  font-size: 16px;
+  color: #FFFFFF;
+  line-height: 1.5;
+}
