@@ -9,14 +9,14 @@ function generateRondelet() {
     let words = sentence1.split(" ");
 
    //skapa rondelet
-    let rondelet = words.slice(0, 4).join(" ").toUpperCase() + "\n\n";
-    rondelet += words.slice(0, 4).join(" ") + "\n";
-    rondelet += sentence1.slice(words.slice(0, 4).join(" ").length).trim() + "\n"; // Remove leading space using trim()
-    rondelet += words.slice(0, 4).join(" ") + "\n";
-    rondelet += sentence2 + "\n";
-    rondelet += sentence3 + "\n";
-    rondelet += sentence4 + "\n";
-    rondelet += words.slice(0, 4).join(" ") + "\n";
+    let rondelet = words.slice(0, 4).join(" ").toUpperCase() + "\n\n"; //lägger till fyra första orden med stora bokstäver och två nya rader
+    rondelet += words.slice(0, 4).join(" ") + "\n"; //lägger till fyra första orden igen plus en ny rad
+    rondelet += sentence1.slice(words.slice(0, 4).join(" ").length).trim() + "\n"; //lägger till alla ord i första meningen efter de fyra första och en ny rad
+    rondelet += words.slice(0, 4).join(" ") + "\n"; //lägger till de fyra första orden igen och en ny rad
+    rondelet += sentence2 + "\n"; //lägger till mening 2 och en ny rad
+    rondelet += sentence3 + "\n"; // lägger till mening 3 och en ny rad
+    rondelet += sentence4 + "\n"; // lägger till mening 4 och en ny rad
+    rondelet += words.slice(0, 4).join(" ") + "\n"; // lägger till första fyra orden igen
 
     // Skriv ut rondelet
     document.getElementById("rondeletOutput").textContent = rondelet;
